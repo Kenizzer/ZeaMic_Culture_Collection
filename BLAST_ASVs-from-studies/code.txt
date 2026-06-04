@@ -1,0 +1,52 @@
+# concatenate ASVs into one file
+cat Phyllosphere_ASVs_with_taxonomy_Wagner2020.fasta \
+Rhizosphere_ASVs_with_taxonomy_Wagner2020.fasta \
+Rhizosphere_ASVs_with_taxonomy_Meier2022.fasta \
+Rhizosphere_ASVs_with_taxonomy_Naylor2017.fasta \
+Rhizosphere_ASVs_with_taxonomy_Naylor2017.fasta \
+Root_ASVs_with_taxonomy_Naylor2017.fasta \
+Rhizosphere_ASVs_with_taxonomy_He2024.fasta \
+Root_ASVs_with_taxonomy_He2024.fasta \
+Rhizosphere_ASVs_with_taxonomy_GfellerCadot2023.fasta \
+Root_ASVs_with_taxonomy_GfellerCadot2023.fasta \
+Soil_ASVs_with_taxonomy_GfellerCadot2023.fasta \
+Rhizosphere_ASVs_with_taxonomy_Gfeller2023.fasta \
+Root_ASVs_with_taxonomy_Gfeller2023.fasta \
+Soil_ASVs_with_taxonomy_Gfeller2023.fasta \
+Rhizosphere_ASVs_with_taxonomy_Cadot2021_Aurora.fasta \
+Rhizosphere_ASVs_with_taxonomy_Cadot2021_Reckenholz.fasta \
+Rhizosphere_ASVs_with_taxonomy_Hu2018.fasta \
+Root_ASVs_with_taxonomy_Cadot2021_Aurora.fasta \
+Root_ASVs_with_taxonomy_Cadot2021_Reckenholz.fasta \
+Root_ASVs_with_taxonomy_Hu2018.fasta \
+Soil_ASVs_with_taxonomy_Cadot2021_Aurora.fasta \
+Soil_ASVs_with_taxonomy_Cadot2021_Reckenholz.fasta \
+Soil_ASVs_with_taxonomy_Hu2018.fasta \
+Rhizosphere_ASVs_with_taxonomy_Walters2018.fasta \
+Soil_ASVs_with_taxonomy_Walters2018.fasta \
+Root_ASVs_with_taxonomy_Swift2024.fasta > AllASVs.fasta
+
+
+
+# create blastdb
+makeblastdb -in AllASVs.fasta -dbtype nucl -out ASV_db
+
+# Run the blast
+## Set evalue filter to almost nothing because we would like to do filtering post using precent identity
+## Set max sequence above default so we report all hits for ZeaMic isolates to the ASV tables (Will avoid issues from expanding the taxonomic database with new ASV sets)
+blastn -query ZeaMic_isolate_16Sfull.fasta -db ASV_db -outfmt 6 -perc_identity 99 -evalue 1e10 -max_target_seqs 100000 -out 99results.txt
+blastn -query ZeaMic_isolate_16Sfull.fasta -db ASV_db -outfmt 6 -perc_identity 97 -evalue 1e10 -max_target_seqs 100000 -out 97results.txt
+
+# Format 6
+#1.  qseqid      query or source (gene) sequence id
+#2.  sseqid      subject or target (reference genome) sequence id
+#3.  pident      percentage of identical positions
+#4.  length      alignment length (sequence overlap)
+#5.  mismatch    number of mismatches
+#6.  gapopen     number of gap openings
+#7.  qstart      start of alignment in query
+#8.  qend        end of alignment in query
+#9.  sstart      start of alignment in subject
+#10.  send        end of alignment in subject
+#11.  evalue      expect value
+#12.  bitscore    bit score

@@ -1,6 +1,7 @@
 # Parse Blast alignment results
 ## Generate ASV lists of taxa with alignment to zeamic for other scripts
 ## Presence/absence plots for supplement
+## Code by: Joel Swift 2026
 
 # Load pacakges and set ggplot theme
 library(tidyverse)

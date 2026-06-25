@@ -1,6 +1,7 @@
 # Data processing for "Drought and host selection influence bacterial community dynamics
 # in the grass root microbiome"
 # https://doi.org/10.1038/ismej.2017.118
+## Code by: Joel Swift 2026
 
 ####### Packages #######
 library(tidyverse)

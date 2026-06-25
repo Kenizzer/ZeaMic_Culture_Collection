@@ -1,6 +1,7 @@
 # Analysis of "Large-scale replicated field study of maize rhizosphere 
 # identifies heritable microbes"
 # https://doi.org/10.1073/pnas.1800918115
+## Code by: Joel Swift 2026
 
 ####### Packages #######
 library(tidyverse)

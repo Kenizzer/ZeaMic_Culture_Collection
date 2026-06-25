@@ -1,5 +1,6 @@
 # Abundance Stats from ASV lists
 # Map ASV lists back to studies and pull the stats
+## Code by: Joel Swift 2026
 
 # Load pacakges and set ggplot theme
 library(tidyverse)

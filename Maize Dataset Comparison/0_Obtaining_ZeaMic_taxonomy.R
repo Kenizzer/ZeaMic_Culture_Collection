@@ -1,3 +1,4 @@
+## Code by: Joel Swift 2026
 # ZeaMic isolate taxonomy
 
 library(tidyverse)
@@ -9,7 +10,7 @@ all_isolates_df <-  data.frame(ZeaMic_Isolate = c("HAY10-12D","HAY10-2E","HAY10-
                                                   "KNZ13-11D","KNZ13-1D","KNZ14-4A","KNZ14-4F","KNZ14-9A","KNZ1-6G",
                                                   "KNZ2-6A","KU2C","KU3C","KU4A","KU4C","KU4D","KU4F","MI12","MI13",
                                                   "MI2","MI27","MI9","MSU2B","MSU2C","MSU3D","MSU4B","MSU4C","MSUFA",
-                                                  "MUSFE","NiuAA1","NiuAA2","NiuAA3","NiuAA4","NiuAA5","NiuAA6","NiuAA7",
+                                                  "MSUFE","NiuAA1","NiuAA2","NiuAA3","NiuAA4","NiuAA5","NiuAA6","NiuAA7",
                                                   "SB1","SD1074B","SD173","SD811","SVR3-10G","SVR4-12A","SVR4-3F","SVR4-6G",
                                                   "SVR4-7G","SVR5-10H","SVR5-12B","SVR5-2C","SVR5-6F","SVR5-6H","SVR5-9E",
                                                   "T428B","T572","TLI6-9E","TLI7-10B","TLI7-1G","TLI7-4A","TLI7-4D",

@@ -1,7 +1,7 @@
 # Data processing for "Soil chemical and microbial gradients determine accumulation of
 # root‐exuded secondary metabolites and plant–soil feedbacks in the field"
-
 # https://doi.org/10.1002/sae2.12063
+## Code by: Joel Swift 2026
 
 ####### Packages #######
 library(tidyverse)

@@ -1,4 +1,5 @@
 # Barplot and OA curve for Swift et al. 2025
+## Code by: Joel Swift 2026
 
 # Packages w/ version numbers.
 library(tidyverse); packageVersion('tidyverse')

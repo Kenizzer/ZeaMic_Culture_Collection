@@ -1,6 +1,7 @@
 # Swift, J.F., Kolp, M.R., Carmichael, A. et al. Drought stress homogenizes maize
 # growth responses to diverse natural soil microbiomes. Plant Soil 509, 181–199
 # (2025). https://doi.org/10.1007/s11104-024-06853-x
+## Code by: Joel Swift 2026
 
 ####### Packages #######
 library(tidyverse)

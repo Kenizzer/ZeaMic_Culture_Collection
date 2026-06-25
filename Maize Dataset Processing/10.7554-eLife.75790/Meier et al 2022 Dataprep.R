@@ -1,7 +1,7 @@
 # Data processing for "Association analyses of host genetics, root-colonizing microbes, 
 # and plant phenotypes under different nitrogen conditions in maize"
-
 # Elife 11 (2022): e75790. https://doi.org/10.7554/eLife.75790
+## Code by: Joel Swift 2026
 
 ####### Packages #######
 library(tidyverse)

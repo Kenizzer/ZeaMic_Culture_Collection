@@ -1,5 +1,6 @@
 # Abundance Stats from ASV lists
 ## Merging datasets together to identify new additions for the collection
+## Code by: Joel Swift 2026
 
 # Load packages and set ggplot theme
 library(tidyverse)

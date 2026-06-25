@@ -1,7 +1,8 @@
 # Analysis of "Heritable microbiome variation is correlated with source environment
 # in locally adapted maize varieties"
-
 # https://doi.org/10.1038/s41477-024-01654-7
+## Code by: Joel Swift 2026
+
 
 ####### Packages #######
 library(tidyverse)

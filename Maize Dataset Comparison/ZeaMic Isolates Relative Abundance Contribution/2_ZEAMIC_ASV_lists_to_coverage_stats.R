@@ -1,5 +1,7 @@
 # Abundance Stats from ASV lists
 # Map ASV lists back to studies and pull the stats
+## Code by: Joel Swift 2026
+
 
 # Load pacakges and set ggplot theme
 library(tidyverse)
@@ -386,15 +388,14 @@ dfs <- list(
 all_raw <- map2_dfr(dfs, names(dfs), ~ .x$occ_abun_tax %>%
                       transmute(Study = .y, ASV = otu, ZeaMic_Isolate, otu_rel))
 
-# Summarise to ASV level
+# Summarize to ASV level
 asv_level <- all_raw %>%
   group_by(Study, ASV) %>%
   summarise(
     otu_rel = mean(otu_rel),
     n_iso = n_distinct(ZeaMic_Isolate),
     ZeaMic_Isolate = list(unique(ZeaMic_Isolate)),
-    .groups = "drop"
-  ) %>%
+    .groups = "drop") %>%
   unnest(ZeaMic_Isolate) %>%
   mutate(Abundpercent = otu_rel * 100 / n_iso)
 
@@ -403,8 +404,7 @@ iso_study <- asv_level %>%
   group_by(Study, ZeaMic_Isolate) %>%
   summarise(
     TotalAbundance = sum(Abundpercent),
-    .groups = "drop"
-  )
+    .groups = "drop")
 
 # Pivot table and final formatting
 study_wide <- iso_study %>%

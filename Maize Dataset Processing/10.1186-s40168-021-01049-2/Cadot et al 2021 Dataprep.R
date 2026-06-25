@@ -9,6 +9,8 @@
 # growth and defense by shaping the rhizosphere microbiota"
 #https://doi.org/10.1038/s41467-018-05122-7
 
+## Code by: Joel Swift 2026
+
 ####### Packages #######
 library(tidyverse)
 library(phyloseq)

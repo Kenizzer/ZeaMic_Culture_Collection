@@ -1,3 +1,6 @@
+## Code by: Joel Swift 2026
+
+
 # concatenate ASVs into one file
 cat Phyllosphere_ASVs_with_taxonomy_Wagner2020.fasta \
 Rhizosphere_ASVs_with_taxonomy_Wagner2020.fasta \

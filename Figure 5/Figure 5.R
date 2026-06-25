@@ -1,5 +1,6 @@
 # Abundance Stats from ASV lists
 ## Merging datasets together to identify new additions for the collection
+## Code by: Joel Swift 2026
 
 # Load pacakges and set ggplot theme
 library(tidyverse)
@@ -486,9 +487,16 @@ to_save <- All_studies_collapsed %>%
 
 write.table(to_save, "Dataset Merging Results/Top wanted genera across studies.tsv", sep = "\t", row.names = FALSE)
 
-
+## STATS
+# In collection
 All_studies_collapsed %>% 
+  filter(!Genus %in% c("", NA)) %>%
   filter(InCollection  == "Yes") %>%
+  summarise(sum(n_collapsed))
+
+# Not in collection or NA genus
+All_studies_collapsed %>% 
+  filter(Genus %in% c("", NA)) %>%
   summarise(sum(n_collapsed))
   
 All_studies_collapsed %>% 
@@ -537,3 +545,4 @@ final_plot <- ggarrange(a,combo_plot, labels = "AUTO", nrow = 2, heights = c(1,2
 
 ggsave("Dataset Merging Results/Figure5.svg", final_plot, width = 18, height = 15, units = "cm")
 ggsave("Dataset Merging Results/Figure5.png", final_plot, width = 18, height = 15, units = "cm")
+

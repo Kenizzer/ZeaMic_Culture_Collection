@@ -58,7 +58,7 @@ Extract_Occ_RA_by_compartment <- function(phyloseq_obj, Blast_ASV_list, compartm
 
 #### 1) LOAD ALL STUDIES ####
 ##### 1.1) Meier #####
-Meier_bacterial_ps <- readRDS("../Maize Dataset Comparison/../Maize Dataset Comparison/Phyloseq_objs/Meier_bacterial_phyloseq.RDS")
+Meier_bacterial_ps <- readRDS("../Maize Dataset Comparison/Phyloseq_objs/Meier_bacterial_phyloseq.RDS")
 # Load ASV Lists
 Meier_rhizosphere_asvs <- read.csv("../Maize Dataset Comparison/ASV_LISTS/99/Meier_rhizosphere_ASVs.csv")
 # Add ASV prefix for study (first author first name capitalized)
@@ -486,16 +486,25 @@ to_save <- All_studies_collapsed %>%
 
 write.table(to_save, "Dataset Merging Results/Top wanted genera across studies.tsv", sep = "\t", row.names = FALSE)
 
-b<- plot_highlighted_genus("Ralstonia")
-c<- plot_highlighted_genus("Terrabacter")
-d<- plot_highlighted_genus("Amycolatopsis")
-e<- plot_highlighted_genus("Kribbella")
-f<- plot_highlighted_genus("Blastococcus")
-g<- plot_highlighted_genus("Nitrospira")
-h<- plot_highlighted_genus("Asticcacaulis")
-i<- plot_highlighted_genus("Lysobacter")
-j<- plot_highlighted_genus("Phycicoccus")
-k<- plot_highlighted_genus("Sphingomonas")
+
+All_studies_collapsed %>% 
+  filter(InCollection  == "Yes") %>%
+  summarise(sum(n_collapsed))
+  
+All_studies_collapsed %>% 
+  filter(InCollection  == "No") %>%
+  summarise(sum(n_collapsed))
+
+b <- plot_highlighted_genus("Amycolatopsis")
+c <- plot_highlighted_genus("Terrabacter")
+d <- plot_highlighted_genus("Kribbella")
+e <- plot_highlighted_genus("Blastococcus")
+f <- plot_highlighted_genus("Nitrospira")
+g <- plot_highlighted_genus("Lysobacter")
+h <- plot_highlighted_genus("Phycicoccus")
+i <- plot_highlighted_genus("Ramlibacter")
+j <- plot_highlighted_genus("Nitrosospira")
+k <- plot_highlighted_genus("Mycobacterium")
 
 plot_highlighted_genus_in_zeamic <- function(genus_name) {
   All_studies %>% 
@@ -528,4 +537,3 @@ final_plot <- ggarrange(a,combo_plot, labels = "AUTO", nrow = 2, heights = c(1,2
 
 ggsave("Dataset Merging Results/Figure5.svg", final_plot, width = 18, height = 15, units = "cm")
 ggsave("Dataset Merging Results/Figure5.png", final_plot, width = 18, height = 15, units = "cm")
-

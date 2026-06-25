@@ -1,0 +1,41 @@
+"","Study","Compartment","Identity","Yes"
+"1","Wagner","Phyllosphere","99",50.31
+"2","Wagner","Phyllosphere","97",53.61
+"3","Wagner","Rhizosphere","99",64.43
+"4","Wagner","Rhizosphere","97",75.87
+"5","He","Rhizosphere","99",14.52
+"6","He","Rhizosphere","97",36.67
+"7","He","Root endosphere","99",15.16
+"8","He","Root endosphere","97",37.3
+"9","Naylor","Rhizosphere","99",8.94
+"10","Naylor","Rhizosphere","97",11.46
+"11","Naylor","Root endosphere","99",9.21
+"12","Naylor","Root endosphere","97",11.78
+"13","GfellerCadot","Soil","99",18.97
+"14","GfellerCadot","Soil","97",33.36
+"15","GfellerCadot","Rhizosphere","99",20.21
+"16","GfellerCadot","Rhizosphere","97",35.45
+"17","GfellerCadot","Root endosphere","99",20.2
+"18","GfellerCadot","Root endosphere","97",35.92
+"19","Gfeller","Soil","99",12.08
+"20","Gfeller","Soil","97",29.85
+"21","Gfeller","Rhizosphere","99",14.7
+"22","Gfeller","Rhizosphere","97",35.07
+"23","Gfeller","Root endosphere","99",14.45
+"24","Gfeller","Root endosphere","97",34.45
+"25","Cadot","Soil","99",26.99
+"26","Cadot","Soil","97",43.42
+"27","Cadot","Rhizosphere","99",26.99
+"28","Cadot","Rhizosphere","97",43.42
+"29","Cadot","Root endosphere","99",26.99
+"30","Cadot","Root endosphere","97",43.42
+"31","Hu","Soil","99",14.47
+"32","Hu","Soil","97",37.91
+"33","Hu","Rhizosphere","99",14.47
+"34","Hu","Rhizosphere","97",37.92
+"35","Hu","Root endosphere","99",14.47
+"36","Hu","Root endosphere","97",37.92
+"37","Walters","Rhizosphere","99",19.9
+"38","Walters","Rhizosphere","97",48.95
+"39","Walters","Soil","99",17.73
+"40","Walters","Soil","97",41.6

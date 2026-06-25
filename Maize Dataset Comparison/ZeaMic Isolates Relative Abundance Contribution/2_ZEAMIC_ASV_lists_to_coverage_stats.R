@@ -56,7 +56,7 @@ Wagner_bacterial_ps <- readRDS("../Phyloseq_objs/Wagner_bacterial_phyloseq.RDS")
 Wagner_list1 <- read.csv("99/Wagner_phyllosphere_ASVs.csv")
 Wagner_list2 <- read.csv("99/Wagner_rhizosphere_ASVs.csv")
 # concatenate them togher
-Wagner_asvs <- bind_rows(Wagner_list1, Wagner_list2) %>% distinct(ASV_id, .keep_all = TRUE)
+Wagner_asvs <- bind_rows(Wagner_list1, Wagner_list2) %>% distinct(ZeaMic_Isolate, ASV_id, .keep_all = TRUE)
 # Add ASV prefix for study (first author first name capitalized)
 Wagner_asvs$ASV_id <- paste0("Wagner_", Wagner_asvs$ASV_id)
 # run function for O/A table
@@ -70,7 +70,7 @@ He_bacterial_ps <- phyloseq::subset_samples(He_bacterial_ps, tissue != "Soil")
 He_list1 <- read.csv("99/He_rhizosphere_ASVs.csv")
 He_list2 <- read.csv("99/He_root_ASVs.csv")
 # concatenate them together
-He_asvs <- bind_rows(He_list1, He_list2) %>% distinct(ASV_id, .keep_all = TRUE)
+He_asvs <- bind_rows(He_list1, He_list2) %>% distinct(ZeaMic_Isolate, ASV_id, .keep_all = TRUE)
 # Add ASV prefix for study (first author first name capitalized)
 He_asvs$ASV_id <- paste0("He_", He_asvs$ASV_id)
 # run function for O/A table
@@ -84,7 +84,7 @@ Naylor_bacterial_ps <- subset_samples(Naylor_bacterial_ps, isolation_source == "
 Naylor_list1 <- read.csv("99/Naylor_rhizosphere_ASVs.csv")
 Naylor_list2 <- read.csv("99/Naylor_root_ASVs.csv")
 # concatenate them together
-Naylor_asvs <- bind_rows(Naylor_list1, Naylor_list2) %>% distinct(ASV_id, .keep_all = TRUE)
+Naylor_asvs <- bind_rows(Naylor_list1, Naylor_list2) %>% distinct(ZeaMic_Isolate, ASV_id, .keep_all = TRUE)
 # Add ASV prefix for study (first author first name capitalized)
 Naylor_asvs$ASV_id <- paste0("Naylor_", Naylor_asvs$ASV_id)
 # run function for O/A table
@@ -100,7 +100,7 @@ GfellerCadot_list1 <- read.csv("99/GfellerCadot_rhizosphere_ASVs.csv")
 GfellerCadot_list2 <- read.csv("99/GfellerCadot_root_ASVs.csv")
 GfellerCadot_list3 <- read.csv("99/GfellerCadot_soil_ASVs.csv")
 # concatenate them together
-GfellerCadot_asvs <- bind_rows(GfellerCadot_list1, GfellerCadot_list2, GfellerCadot_list3) %>% distinct(ASV_id, .keep_all = TRUE)
+GfellerCadot_asvs <- bind_rows(GfellerCadot_list1, GfellerCadot_list2, GfellerCadot_list3) %>% distinct(ZeaMic_Isolate, ASV_id, .keep_all = TRUE)
 # Add ASV prefix for study (first author first name capitalized)
 GfellerCadot_asvs$ASV_id <- paste0("GfellerCadot_", GfellerCadot_asvs$ASV_id)
 # run function for O/A table
@@ -116,7 +116,7 @@ Gfeller_list1 <- read.csv("99/Gfeller_rhizosphere_ASVs.csv")
 Gfeller_list2 <- read.csv("99/Gfeller_root_ASVs.csv")
 Gfeller_list3 <- read.csv("99/Gfeller_soil_ASVs.csv")
 # concatenate them together
-Gfeller_asvs <- bind_rows(Gfeller_list1, Gfeller_list2, Gfeller_list3) %>% distinct(ASV_id, .keep_all = TRUE)
+Gfeller_asvs <- bind_rows(Gfeller_list1, Gfeller_list2, Gfeller_list3) %>% distinct(ZeaMic_Isolate, ASV_id, .keep_all = TRUE)
 # Add ASV prefix for study (first author first name capitalized)
 Gfeller_asvs$ASV_id <- paste0("Gfeller_", Gfeller_asvs$ASV_id)
 # run function for O/A table
@@ -132,7 +132,7 @@ Cadot_list1 <- read.csv("99/Cadot_rhizosphere_ASVs.csv")
 Cadot_list2 <- read.csv("99/Cadot_root_ASVs.csv")
 Cadot_list3 <- read.csv("99/Cadot_soil_ASVs.csv")
 # concatenate them together
-Cadot_asvs <- bind_rows(Cadot_list1, Cadot_list2, Cadot_list3) %>% distinct(ASV_id, .keep_all = TRUE)
+Cadot_asvs <- bind_rows(Cadot_list1, Cadot_list2, Cadot_list3) %>% distinct(ZeaMic_Isolate, ASV_id, .keep_all = TRUE)
 # Add ASV prefix for study (first author first name capitalized)
 Cadot_asvs$ASV_id <- paste0("Cadot_", Cadot_asvs$ASV_id)
 # run function for O/A table
@@ -148,7 +148,7 @@ Hu_list1 <- read.csv("99/Hu_rhizosphere_ASVs.csv")
 Hu_list2 <- read.csv("99/Hu_root_ASVs.csv")
 Hu_list3 <- read.csv("99/Hu_soil_ASVs.csv")
 # concatenate them together
-Hu_asvs <- bind_rows(Hu_list1, Hu_list2, Hu_list3) %>% distinct(ASV_id, .keep_all = TRUE)
+Hu_asvs <- bind_rows(Hu_list1, Hu_list2, Hu_list3) %>% distinct(ZeaMic_Isolate, ASV_id, .keep_all = TRUE)
 # Add ASV prefix for study (first author first name capitalized)
 Hu_asvs$ASV_id <- paste0("Cadot_", Hu_asvs$ASV_id)
 # run function for O/A table
@@ -248,7 +248,7 @@ Wagner_bacterial_ps <- readRDS("../Phyloseq_objs/Wagner_bacterial_phyloseq.RDS")
 Wagner_list1 <- read.csv("97/Wagner_phyllosphere_ASVs.csv")
 Wagner_list2 <- read.csv("97/Wagner_rhizosphere_ASVs.csv")
 # concatenate them togher
-Wagner_asvs <- bind_rows(Wagner_list1, Wagner_list2) %>% distinct(ASV_id, .keep_all = TRUE)
+Wagner_asvs <- bind_rows(Wagner_list1, Wagner_list2) %>% distinct(ZeaMic_Isolate, ASV_id, .keep_all = TRUE)
 # Add ASV prefix for study (first author first name capitalized)
 Wagner_asvs$ASV_id <- paste0("Wagner_", Wagner_asvs$ASV_id)
 # run function for O/A table
@@ -262,7 +262,7 @@ He_bacterial_ps <- phyloseq::subset_samples(He_bacterial_ps, tissue != "Soil")
 He_list1 <- read.csv("97/He_rhizosphere_ASVs.csv")
 He_list2 <- read.csv("97/He_root_ASVs.csv")
 # concatenate them together
-He_asvs <- bind_rows(He_list1, He_list2) %>% distinct(ASV_id, .keep_all = TRUE)
+He_asvs <- bind_rows(He_list1, He_list2) %>% distinct(ZeaMic_Isolate, ASV_id, .keep_all = TRUE)
 # Add ASV prefix for study (first author first name capitalized)
 He_asvs$ASV_id <- paste0("He_", He_asvs$ASV_id)
 # run function for O/A table
@@ -276,7 +276,7 @@ Naylor_bacterial_ps <- subset_samples(Naylor_bacterial_ps, isolation_source == "
 Naylor_list1 <- read.csv("97/Naylor_rhizosphere_ASVs.csv")
 Naylor_list2 <- read.csv("97/Naylor_root_ASVs.csv")
 # concatenate them together
-Naylor_asvs <- bind_rows(Naylor_list1, Naylor_list2) %>% distinct(ASV_id, .keep_all = TRUE)
+Naylor_asvs <- bind_rows(Naylor_list1, Naylor_list2) %>% distinct(ZeaMic_Isolate, ASV_id, .keep_all = TRUE)
 # Add ASV prefix for study (first author first name capitalized)
 Naylor_asvs$ASV_id <- paste0("Naylor_", Naylor_asvs$ASV_id)
 # run function for O/A table
@@ -292,7 +292,7 @@ GfellerCadot_list1 <- read.csv("97/GfellerCadot_rhizosphere_ASVs.csv")
 GfellerCadot_list2 <- read.csv("97/GfellerCadot_root_ASVs.csv")
 GfellerCadot_list3 <- read.csv("97/GfellerCadot_soil_ASVs.csv")
 # concatenate them together
-GfellerCadot_asvs <- bind_rows(GfellerCadot_list1, GfellerCadot_list2, GfellerCadot_list3) %>% distinct(ASV_id, .keep_all = TRUE)
+GfellerCadot_asvs <- bind_rows(GfellerCadot_list1, GfellerCadot_list2, GfellerCadot_list3) %>% distinct(ZeaMic_Isolate, ASV_id, .keep_all = TRUE)
 # Add ASV prefix for study (first author first name capitalized)
 GfellerCadot_asvs$ASV_id <- paste0("GfellerCadot_", GfellerCadot_asvs$ASV_id)
 # run function for O/A table
@@ -308,7 +308,7 @@ Gfeller_list1 <- read.csv("97/Gfeller_rhizosphere_ASVs.csv")
 Gfeller_list2 <- read.csv("97/Gfeller_root_ASVs.csv")
 Gfeller_list3 <- read.csv("97/Gfeller_soil_ASVs.csv")
 # concatenate them together
-Gfeller_asvs <- bind_rows(Gfeller_list1, Gfeller_list2, Gfeller_list3) %>% distinct(ASV_id, .keep_all = TRUE)
+Gfeller_asvs <- bind_rows(Gfeller_list1, Gfeller_list2, Gfeller_list3) %>% distinct(ZeaMic_Isolate, ASV_id, .keep_all = TRUE)
 # Add ASV prefix for study (first author first name capitalized)
 Gfeller_asvs$ASV_id <- paste0("Gfeller_", Gfeller_asvs$ASV_id)
 # run function for O/A table
@@ -324,7 +324,7 @@ Cadot_list1 <- read.csv("97/Cadot_rhizosphere_ASVs.csv")
 Cadot_list2 <- read.csv("97/Cadot_root_ASVs.csv")
 Cadot_list3 <- read.csv("97/Cadot_soil_ASVs.csv")
 # concatenate them together
-Cadot_asvs <- bind_rows(Cadot_list1, Cadot_list2, Cadot_list3) %>% distinct(ASV_id, .keep_all = TRUE)
+Cadot_asvs <- bind_rows(Cadot_list1, Cadot_list2, Cadot_list3) %>% distinct(ZeaMic_Isolate, ASV_id, .keep_all = TRUE)
 # Add ASV prefix for study (first author first name capitalized)
 Cadot_asvs$ASV_id <- paste0("Cadot_", Cadot_asvs$ASV_id)
 # run function for O/A table
@@ -340,7 +340,7 @@ Hu_list1 <- read.csv("97/Hu_rhizosphere_ASVs.csv")
 Hu_list2 <- read.csv("97/Hu_root_ASVs.csv")
 Hu_list3 <- read.csv("97/Hu_soil_ASVs.csv")
 # concatenate them together
-Hu_asvs <- bind_rows(Hu_list1, Hu_list2, Hu_list3) %>% distinct(ASV_id, .keep_all = TRUE)
+Hu_asvs <- bind_rows(Hu_list1, Hu_list2, Hu_list3) %>% distinct(ZeaMic_Isolate, ASV_id, .keep_all = TRUE)
 # Add ASV prefix for study (first author first name capitalized)
 Hu_asvs$ASV_id <- paste0("Cadot_", Hu_asvs$ASV_id)
 # run function for O/A table

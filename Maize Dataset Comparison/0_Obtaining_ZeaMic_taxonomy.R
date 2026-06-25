@@ -14,7 +14,8 @@ all_isolates_df <-  data.frame(ZeaMic_Isolate = c("HAY10-12D","HAY10-2E","HAY10-
                                                   "SVR4-7G","SVR5-10H","SVR5-12B","SVR5-2C","SVR5-6F","SVR5-6H","SVR5-9E",
                                                   "T428B","T572","TLI6-9E","TLI7-10B","TLI7-1G","TLI7-4A","TLI7-4D",
                                                   "TLI7-8E","TLI7-8G","TLI8-12F","TLI8-1H","TLI8-3E","TLI8-6A","TLI9-4D",
-                                                  "TLI9-5A","LBA21","LBA71","LDE1","LMG1","LML1","LRC7.O","LSP13"), 
+                                                  "TLI9-5A","LBA21","LBA71","LDE1","LMG1","LML1","LRC7.O","LSP13",
+                                                  "E-01", "R-06", "R-17", "R-28", "R-29", "R-33"), 
                                genus = c("Enterobacter","Enterobacter","Enterobacter","Monashia","Burkholderia",
                                          "Burkholderia","Monashia","Trinickia","Luteibacter","Leifsonia","Monashia",
                                          "Burkholderia","Mesorhizobium","Burkholderia","Labrys","Microbacterium",
@@ -30,7 +31,8 @@ all_isolates_df <-  data.frame(ZeaMic_Isolate = c("HAY10-12D","HAY10-2E","HAY10-
                                          "Paraburkholderia","Rhizobium","Sinomonas","Arthrobacter","Agrobacterium","Rhizobium",
                                          "Dyella","Luteibacter","Burkholderia","Variovorax","Burkholderia","Rhizobium",
                                          "Burkholderia","Dyella","Burkholderia","Rhizobium","Variovorax","Peribacillus",
-                                         "Bacillus","Deinococcus","Streptomyces","Nocardioides","Rhizobium","Sphingobium"))
+                                         "Bacillus","Deinococcus","Streptomyces","Nocardioides","Rhizobium","Sphingobium",
+                                         "Dyadobacter", "Pedobacter", "Exiguobacterium", "Acidovorax", "Ralstonia", "Mucilaginibacter"))
 
 # Get full taxonomy for isolates
 ## Getting taxonomy for genera

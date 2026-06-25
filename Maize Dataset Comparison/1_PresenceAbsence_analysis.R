@@ -96,14 +96,17 @@ class_df_gen <- genera_99_data %>% distinct(genus, class)
 ## Very minimal class barplot, will be attached to other plots
 class_bar_iso <- ggplot(class_df_iso, aes(x = 1, y = ZeaMic_Isolate, fill = class)) +
   geom_tile() +
-  scale_fill_manual(values = c("Actinomycetes"= "#23733a",
-                              "Bacilli" = "#b8d437",
-                              "Deinococci" = "#ffc323",
-                              "Chitinophagia" = "#f0852f",
-                              "Flavobacteriia" = "#e51f41",
-                              "Alphaproteobacteria" = "#c6529f",
-                              "Betaproteobacteria" = "#405caa",
-                              "Gammaproteobacteria" = "#46bbe7"), name = "Class") +
+  scale_fill_manual(values = c(
+    "Actinomycetes" = "#23733a",
+    "Bacilli" = "#b8d437",
+    "Deinococci" = "#ffc323",
+    "Chitinophagia" = "#f0852f",
+    "Cytophagia" = "#c68642",
+    "Flavobacteriia" = "#e51f41",
+    "Sphingobacteriia" = "#a63d40",
+    "Alphaproteobacteria" = "#c6529f",
+    "Betaproteobacteria" = "#405caa",
+    "Gammaproteobacteria" = "#46bbe7"), name = "Class") +
   scale_x_continuous(expand = c(0, 0)) +
   scale_y_discrete(limits = levels(heatmap_data$ZeaMic_Isolate), expand = c(0, 0)) +
   labs(x = NULL, y = NULL) +
@@ -117,14 +120,17 @@ class_bar_iso <- ggplot(class_df_iso, aes(x = 1, y = ZeaMic_Isolate, fill = clas
 
 class_bar_gen <- ggplot(class_df_gen, aes(x = 1, y = genus, fill = class)) +
   geom_tile() +
-  scale_fill_manual(values = c("Actinomycetes"= "#23733a",
-                               "Bacilli" = "#b8d437",
-                               "Deinococci" = "#ffc323",
-                               "Chitinophagia" = "#f0852f",
-                               "Flavobacteriia" = "#e51f41",
-                               "Alphaproteobacteria" = "#c6529f",
-                               "Betaproteobacteria" = "#405caa",
-                               "Gammaproteobacteria" = "#46bbe7"), name = "Class") +
+  scale_fill_manual(values = c(
+    "Actinomycetes" = "#23733a",
+    "Bacilli" = "#b8d437",
+    "Deinococci" = "#ffc323",
+    "Chitinophagia" = "#f0852f",
+    "Cytophagia" = "#c68642",
+    "Flavobacteriia" = "#e51f41",
+    "Sphingobacteriia" = "#a63d40",
+    "Alphaproteobacteria" = "#c6529f",
+    "Betaproteobacteria" = "#405caa",
+    "Gammaproteobacteria" = "#46bbe7"), name = "Class") +
   scale_x_continuous(expand = c(0, 0)) +
   scale_y_discrete(limits = levels(heatmap_data$genus), expand = c(0, 0)) +
   labs(x = NULL, y = NULL) +
@@ -428,14 +434,17 @@ class_df_gen <- genera_97_data %>% distinct(genus, class)
 ## Very minimal class barplot, will be attached to other plots
 class_bar_iso <- ggplot(class_df_iso, aes(x = 1, y = ZeaMic_Isolate, fill = class)) +
   geom_tile() +
-  scale_fill_manual(values = c("Actinomycetes"= "#23733a",
-                               "Bacilli" = "#b8d437",
-                               "Deinococci" = "#ffc323",
-                               "Chitinophagia" = "#f0852f",
-                               "Flavobacteriia" = "#e51f41",
-                               "Alphaproteobacteria" = "#c6529f",
-                               "Betaproteobacteria" = "#405caa",
-                               "Gammaproteobacteria" = "#46bbe7"), name = "Class") +
+  scale_fill_manual(values = c(
+    "Actinomycetes" = "#23733a",
+    "Bacilli" = "#b8d437",
+    "Deinococci" = "#ffc323",
+    "Chitinophagia" = "#f0852f",
+    "Cytophagia" = "#c68642",
+    "Flavobacteriia" = "#e51f41",
+    "Sphingobacteriia" = "#a63d40",
+    "Alphaproteobacteria" = "#c6529f",
+    "Betaproteobacteria" = "#405caa",
+    "Gammaproteobacteria" = "#46bbe7"), name = "Class") +
   scale_x_continuous(expand = c(0, 0)) +
   scale_y_discrete(limits = levels(heatmap_data$ZeaMic_Isolate), expand = c(0, 0)) +
   labs(x = NULL, y = NULL) +
@@ -449,14 +458,17 @@ class_bar_iso <- ggplot(class_df_iso, aes(x = 1, y = ZeaMic_Isolate, fill = clas
 
 class_bar_gen <- ggplot(class_df_gen, aes(x = 1, y = genus, fill = class)) +
   geom_tile() +
-  scale_fill_manual(values = c("Actinomycetes"= "#23733a",
-                               "Bacilli" = "#b8d437",
-                               "Deinococci" = "#ffc323",
-                               "Chitinophagia" = "#f0852f",
-                               "Flavobacteriia" = "#e51f41",
-                               "Alphaproteobacteria" = "#c6529f",
-                               "Betaproteobacteria" = "#405caa",
-                               "Gammaproteobacteria" = "#46bbe7"), name = "Class") +
+  scale_fill_manual(values = c(
+    "Actinomycetes" = "#23733a",
+    "Bacilli" = "#b8d437",
+    "Deinococci" = "#ffc323",
+    "Chitinophagia" = "#f0852f",
+    "Cytophagia" = "#c68642",
+    "Flavobacteriia" = "#e51f41",
+    "Sphingobacteriia" = "#a63d40",
+    "Alphaproteobacteria" = "#c6529f",
+    "Betaproteobacteria" = "#405caa",
+    "Gammaproteobacteria" = "#46bbe7"), name = "Class") +
   scale_x_continuous(expand = c(0, 0)) +
   scale_y_discrete(limits = levels(heatmap_data$genus), expand = c(0, 0)) +
   labs(x = NULL, y = NULL) +

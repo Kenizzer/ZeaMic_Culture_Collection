@@ -1,4 +1,4 @@
-# Distributions of subsamples of At- and Lj-RSHPEREs
+# Distributions of subsamples of MRB Isolates
 
 library(tidyverse)
 library(patchwork)
@@ -548,3 +548,4 @@ final_plot97 <- wrap_plots(
 final_plot97
 ggsave("Supplement/FigureS8.svg", final_plot97, width = 24, height = 12, unit = "cm")
 ggsave("Supplement/FigureS8.png", final_plot97, width = 24, height = 12, unit = "cm")
+

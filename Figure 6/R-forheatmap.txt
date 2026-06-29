@@ -1,0 +1,5 @@
+ggplot(genomemining, aes(ShortFunction, Class_Genus_Isolate, fill=NormSum)) + 
+  geom_tile(color="gray", lwd=0.5, linetype=1) +
+  scale_fill_gradient2(low="white", high="#0d4c85") + theme_classic() + 
+  theme(axis.text.y = element_text(size=10, color = "black"), 
+        axis.text.x = element_text(size=10, color = "black")) 

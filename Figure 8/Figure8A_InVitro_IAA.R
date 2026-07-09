@@ -39,4 +39,4 @@ IAA_PLOT <- IAA_data %>%
   theme(axis.text.x = element_text(angle = 45, hjust = 1, size = 6), legend.position = "none", 
         axis.text.y  = element_text(size = 10))
 
-ggsave("Figure panels/Figure7B.svg", IAA_PLOT, width = 26, height = 10, unit = "cm")
+ggsave("Figure panels/Figure8A.svg", IAA_PLOT, width = 26, height = 10, unit = "cm")

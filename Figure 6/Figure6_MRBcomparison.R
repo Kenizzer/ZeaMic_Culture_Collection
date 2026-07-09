@@ -282,7 +282,7 @@ final_plot <- wrap_plots(
 
 
 final_plot
-ggsave("Distrutions_99-97_MRB.svg", final_plot, width = 30, height = 30, unit = "cm")
+#ggsave("Distrutions_99-97_MRB.svg", final_plot, width = 30, height = 30, unit = "cm")
 
 
 
@@ -414,7 +414,7 @@ final_plot99 <- wrap_plots(
         legend.key = element_rect(fill = "#b3b3b3ff",color = NA),
         legend.background = element_rect(fill = "#b3b3b3ff", color = "black"))
 final_plot99
-ggsave("Figure panels/Figure7A.svg", final_plot99, width = 24, height = 12, unit = "cm")
+ggsave("Figure panels/Figure6.svg", final_plot99, width = 24, height = 12, unit = "cm")
 
 
 #### 97 only plot ####

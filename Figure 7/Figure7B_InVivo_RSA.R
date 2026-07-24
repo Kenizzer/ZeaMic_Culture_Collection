@@ -98,5 +98,5 @@ p <- ggplot(df, aes(x = Isolate, y = g)) +
     axis.text.y  = element_text(size = 10))
 
 # Save 
-ggsave("Figure panels/Figure8B.svg", p, width = 26, height = 10, unit = "cm")
+ggsave("Figure panels/Figure7B.svg", p, width = 26, height = 10, unit = "cm")
 
